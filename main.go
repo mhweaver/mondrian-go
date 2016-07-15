@@ -104,7 +104,7 @@ func getRectangles(initialRectangle image.Rectangle) []image.Rectangle {
 	}
 	rectangles = append(rectangles, leftRect, rightRect)
 
-	// Since we intentionally added duplicates, we should probably remove those...
+	// Since we may have added duplicates, we should probably remove those...
 	uniqueRectangles := make([]image.Rectangle, numSplits)
 	seen := make(map[image.Rectangle]bool)
 	for _, r := range rectangles {
